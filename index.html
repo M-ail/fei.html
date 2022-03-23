@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>婳菲婳</title>
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <link rel="shortcut icon" href="font/favicon.ico" type="image/x-icon"/>
+	<link href="css/common.css" rel="stylesheet" type="text/css"/>
+    <script>
+      window.onload=function(){
+                    document.onkeydown=function(){
+                        var e=window.event||arguments[0];
+                        if(e.keyCode==123){
+                            return false;
+                        }else if((e.ctrlKey)&&(e.shiftKey)&&(e.keyCode==73)){
+                            return false;
+                        }
+                    };
+                    document.oncontextmenu=function(){
+                        return false;
+                   }
+                }          
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <a href="javascript:void(0);" class="vip zoom-btn" onclick="fnOpenCodeImg()">
+        <img src="images/vip.png">
+    </a>
+    <b class="kog"></b>
+    <div class="container">
+        <div class="t_box">
+            <img class="img_t" src="images/t.png">
+        </div>
+        <div class="tele">
+            <img class="tele_img" src="images/b1.png">
+            <p>美工： LOGO设计、活动宣传图、海报图、EXCEL表格图(可自行修改) 。</p>
+            <p>UI/前端开发：PC/APP网页全套设计、PC/APP网页开发</p>
+        </div>
+        <div class="tele">
+            <img class="tele_img" src="images/b2.png">
+            <div class="tele_gz">
+                <p> 1/在本工作室制作所有作品都是绝对保密,绝不外泄；</p>
+                <p> 2/禁止套图(图只适用于一个公司或平台修改使用）；</p>
+                <p> 3/图片享受30%修改服务(特效标题不在内)超服务另计；</p>
+                <p> 4/晚9点为下班时间, 需夜间加急另计；</p>
+                <p> 5/线上婳菲婳工作室享受一切解释权！</p>
+            </div>
+        </div>
+        <div class="lc">
+            <img class="lc_img" src="images/lc.png">
+        </div>
+        <h3>亲！点击按钮【快呼上线】</h3>
+        <div class="btn">
+            <a class="bnt1"onclick="copyTextE()"></a>
+			<p id="text_e">f_eifei@qq.com</p>
+			<textarea id="input_e"></textarea>
+            <a class="bnt2"onclick="copyTextQ()" href="tencent://message/?uin=528136399" class="nom"></a>
+			<p id="text_q">528136399</p>
+			<textarea id="input_q"></textarea>
+        </div>
+    </div>
+    <div class="footer">本通道服务老客户及推荐客户服务业务,杜绝钓鱼客。</div>
+    </div>
+<script src="js/rem.js"></script>              
+<script src="js/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript">
+    function fnOpenCodeImg(){
+        var str='<div class="dark animated fadeInDown" onclick="fnCloseDark()">'+
+            '<div class="box_img">'+
+            '<div class="code_gj">'+
+            '<img src="./images/code_gj.png" alt="">'+
+            '</div>'+
+            '</div>'+
+            '</div>'
+
+        $('body').append(str)
+    }
+    function fnCloseDark(){
+        $('.dark').remove();
+        $('.addr').val("");
+    }
+
+  function copyTextE() {
+      var text = document.getElementById("text_e").innerText;
+      var input = document.getElementById("input_e");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("【邮箱已复制好了】①编辑:1237信息发送邮箱 ②菲菲立即联系您！");
+    }
+	function copyTextQ() {
+      var text = document.getElementById("text_q").innerText;
+      var input = document.getElementById("input_q");
+      input.value = text; // 修改文本框的内容
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("【QQ已复制好了】①加QQ发1237 ②菲菲立即联系您！");
+    }
+</script>
+</body>
+
+</html>
