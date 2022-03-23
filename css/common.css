@@ -75,7 +75,7 @@
         }
         .btn .bnt1{
             display: block;
-            background: url(images/btn1.png) no-repeat;
+            background: url(../images/btn1.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.45rem;
@@ -83,7 +83,7 @@
         }
         .btn .bnt2{
             display: block;
-            background: url(images/btn2.png) no-repeat;
+            background: url(../images/btn2.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.45rem;
@@ -218,7 +218,7 @@
         }
         .btn .bnt1{
             display: block;
-            background: url(images/btn1.png) no-repeat;
+            background: url(../images/btn1.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.7rem;
@@ -226,7 +226,7 @@
         }
         .btn .bnt2{
             display: block;
-            background: url(images/btn2.png) no-repeat;
+            background: url(../images/btn2.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.7rem;
