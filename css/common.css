@@ -75,15 +75,16 @@
         }
         .btn .bnt1{
             display: block;
-            background: url(images/btn1.png) no-repeat;
+            background: url(../images/btn1.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.45rem;
             margin-bottom: 0.04rem;
+	    cursor:pointer;
         }
         .btn .bnt2{
             display: block;
-            background: url(images/btn2.png) no-repeat;
+            background: url(../images/btn2.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.45rem;
@@ -97,13 +98,13 @@
         }
         .vip{
             position: absolute;
-            width: 0.62rem;
-            height: 0.62rem;
+            width: 0.6rem;
+            height: 0.6rem;
             top: 3.6rem;
             left: 11.1rem;
         }
         .vip img{
-            width: 100%;
+            width: 116%;
             text-align: center;
         }
         /*缩放效果*/
@@ -139,10 +140,6 @@
                 transform: scale(1);
             }
         }
-        /**弹窗***/
-        .box_img{
-
-        }
         .dark{
             position: absolute;
             top: 0;
@@ -164,7 +161,6 @@
             text-align: center;
             border-radius: 10px;
         }
-
     }
     /*H5移动端端*/
     @media screen and (max-width: 768px) {
@@ -173,6 +169,7 @@
             width: 6.5rem;
             margin: auto;
             margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
         }
         .t_box{
             margin-top: 0.2rem;
@@ -218,7 +215,7 @@
         }
         .btn .bnt1{
             display: block;
-            background: url(images/btn1.png) no-repeat;
+            background: url(../images/btn1.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.7rem;
@@ -226,7 +223,7 @@
         }
         .btn .bnt2{
             display: block;
-            background: url(images/btn2.png) no-repeat;
+            background: url(../images/btn2.png) no-repeat;
             background-size: 75%;
             background-position: top;
             height: 0.7rem;
@@ -235,7 +232,7 @@
         .footer{
             color: #8d5907;
             text-align: center;
-            font-size: 0.02rem;
+            font-size: 0.2rem;
             line-height: 0.7rem;
         }
         .vip{
@@ -249,7 +246,6 @@
             width: 100%;
             text-align: center;
         }
-        /*缩放效果*/
         .zoom-btn {
             background-size: contain; /*保持图像本身的宽高比例*/
             transform: translate(-50%, -50%);
@@ -281,10 +277,6 @@
             100% {
                 transform: scale(1);
             }
-        }
-        /**弹窗***/
-        .box_img{
-
         }
         .dark{
             position: absolute;
