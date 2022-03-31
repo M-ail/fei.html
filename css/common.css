@@ -16,6 +16,27 @@
     table {border-collapse: collapse;border-spacing: 0}
     /*PC电脑端*/
     @media screen and (min-width: 768px) {
+	.content {
+	            position:relative;
+        }
+        .red-box {
+	            position:absolute;
+        }
+        .red-box img {
+	            width:50px;
+	            height:auto;
+	            cursor:pointer;
+        }
+        .hide {
+	            display:none;
+        }
+        .time {
+	            position:absolute;
+	            right:30px;
+	            bottom:30px;
+	            color:red;
+	            font-size:20px;
+        }
         .wrap{
             width: 4.5rem;
             height: 8rem;
@@ -164,6 +185,27 @@
     }
     /*H5移动端端*/
     @media screen and (max-width: 768px) {
+	 .content {
+	            position:relative;
+        }
+        .red-box {
+	            position:absolute;
+        }
+        .red-box img {
+	            width:0.6rem;
+	            height:auto;
+	            cursor:pointer;
+        }
+        .hide {
+	            display:none;
+        }
+        .time {
+	            position:absolute;
+	            right:0.24rem;
+	            bottom:0.24rem;
+	            color:red;
+	            font-size:0.24rem;
+        }
         .wrap{
             border: solid 0.02rem #b69460;
             width: 6.5rem;
