@@ -6,8 +6,9 @@
     <title>婳菲婳</title>
     <meta name="viewport"
           content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-    <link rel="shortcut icon" href="font/favicon.ico" type="image/x-icon"/>
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
 	<link href="css/common.css" rel="stylesheet" type="text/css"/>
+	<link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
     <script>
       window.onload=function(){
                     document.onkeydown=function(){
@@ -25,6 +26,11 @@
     </script>
 </head>
 <body>
+<div class="content"></div>
+<div class="time"></div>
+<div class="hide">
+	<div class="red-box" data-txt=""><img src="images/petal.png" onclick="fnOpenPetalImg()"></div>    
+</div>	
 <div class="wrap">
     <a href="javascript:void(0);" class="vip zoom-btn" onclick="fnOpenCodeImg()">
         <img src="images/vip.png">
@@ -67,11 +73,85 @@
 <script src="js/rem.js"></script>              
 <script src="js/jquery-1.8.3.min.js"></script> 
 <script type="text/javascript">
+$(function() {
+    const $content = $('.content');
+    const $redBox = $('.red-box');
+    const redContentWidth = $content.width();
+    const redBoxWidth = $redBox.width();
+    const basePadding = 30;
+    const maxLeftPX = redContentWidth - redBoxWidth - basePadding * 2;
+
+    let zIndex = 1;
+    let timer;
+
+
+    function getRandom(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
+
+    function redBoxSpeed($el, time) {
+        $el.animate({
+                top: '600px'
+            },
+            time * 1000,
+            function() {
+                $el.remove();
+            }
+        )
+    }
+
+    function createRedBox() {
+        const $newNode = $redBox.clone(true);
+        $newNode.attr('data-txt', Math.random() * 100);
+        $newNode.css({
+            'z-index': zIndex++,
+            'left': getRandom(basePadding, maxLeftPX) + 'px',
+            'transform': 'rotate(' + getRandom(-30, 30) + 'deg)'
+        })
+        $content.append($newNode);
+        redBoxSpeed($newNode, 5);
+    }
+
+    function createRedBoxRain() {
+        let count = 120;
+        timer = setInterval(() => {
+            if (count == 0) {
+                clearInterval(timer);
+            } else {
+                count--
+                $('.time').text(count + 's');
+                createRedBox();
+            }
+        }, 300)
+    }
+
+    function ready() {
+        createRedBoxRain();
+    }
+    ready();
+})
+
+
     function fnOpenCodeImg(){
         var str='<div class="dark animated fadeInDown" onclick="fnCloseDark()">'+
             '<div class="box_img">'+
             '<div class="code_gj">'+
             '<img src="./images/code_gj.png" alt="">'+
+            '</div>'+
+            '</div>'+
+            '</div>'
+        $('body').append(str)
+    }
+    function fnCloseDark(){
+        $('.dark').remove();
+        $('.addr').val("");
+    }
+	
+	 function fnOpenPetalImg(){
+        var str='<div class="dark animated bounceIn" onclick="fnCloseDark()">'+
+            '<div class="box_img">'+
+            '<div class="code_gj">'+
+            '<img src="./images/petal_txt.png" alt="">'+
             '</div>'+
             '</div>'+
             '</div>'
