@@ -16,7 +16,7 @@
     table {border-collapse: collapse;border-spacing: 0}
     /*PC电脑端*/
     @media screen and (min-width: 768px) {
-	.content {
+		.content {
 	            position:relative;
         }
         .red-box {
@@ -37,6 +37,8 @@
 	            color:red;
 	            font-size:20px;
         }
+
+		
         .wrap{
             width: 4.5rem;
             height: 8rem;
@@ -101,7 +103,7 @@
             background-position: top;
             height: 0.45rem;
             margin-bottom: 0.04rem;
-	    cursor:pointer;
+			cursor:pointer;
         }
         .btn .bnt2{
             display: block;
@@ -119,13 +121,13 @@
         }
         .vip{
             position: absolute;
-            width: 0.6rem;
-            height: 0.6rem;
-            top: 3.6rem;
-            left: 11.1rem;
+            width: 0.7rem;
+            height: 0.7rem;
+            top: 3.2rem;
+            left: 11rem;
         }
         .vip img{
-            width: 116%;
+            width: 100%;
             text-align: center;
         }
         /*缩放效果*/
@@ -161,6 +163,10 @@
                 transform: scale(1);
             }
         }
+        /**弹窗***/
+        .box_img{
+
+        }
         .dark{
             position: absolute;
             top: 0;
@@ -171,7 +177,7 @@
             z-index: 999999;
         }
         .code_gj img {
-            width: 3.8rem;
+            width:4.5rem;
             position: fixed;
             z-index: 999;
             top: 0rem;
@@ -182,10 +188,11 @@
             text-align: center;
             border-radius: 10px;
         }
+
     }
     /*H5移动端端*/
     @media screen and (max-width: 768px) {
-	 .content {
+		.content {
 	            position:relative;
         }
         .red-box {
@@ -206,12 +213,12 @@
 	            color:red;
 	            font-size:0.24rem;
         }
+		
         .wrap{
             border: solid 0.02rem #b69460;
             width: 6.5rem;
             margin: auto;
             margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
         }
         .t_box{
             margin-top: 0.2rem;
@@ -274,7 +281,7 @@
         .footer{
             color: #8d5907;
             text-align: center;
-            font-size: 0.2rem;
+            font-size: 0.02rem;
             line-height: 0.7rem;
         }
         .vip{
@@ -285,9 +292,10 @@
             left: 6.4rem;
         }
         .vip img{
-            width: 106%;
+            width: 100%;
             text-align: center;
         }
+        /*缩放效果*/
         .zoom-btn {
             background-size: contain; /*保持图像本身的宽高比例*/
             transform: translate(-50%, -50%);
@@ -319,6 +327,10 @@
             100% {
                 transform: scale(1);
             }
+        }
+        /**弹窗***/
+        .box_img{
+
         }
         .dark{
             position: absolute;
