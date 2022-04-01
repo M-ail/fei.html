@@ -10,7 +10,7 @@
 	<link href="css/common.css" rel="stylesheet" type="text/css"/>
 	<link href="css/animate.min.css" rel="stylesheet" type="text/css"/>
     <script>
-      window.onload=function(){
+      /*window.onload=function(){
                     document.onkeydown=function(){
                         var e=window.event||arguments[0];
                         if(e.keyCode==123){
@@ -22,7 +22,7 @@
                     document.oncontextmenu=function(){
                         return false;
                    }
-                }          
+                }*/          
     </script>
 </head>
 <body>
@@ -32,7 +32,7 @@
 	<div class="red-box" data-txt=""><img src="images/petal.png" onclick="fnOpenPetalImg()"></div>    
 </div>	
 <div class="wrap">
-    <a href="javascript:void(0);" class="vip zoom-btn" onclick="fnOpenCodeImg()">
+    <a href="javascript:void(0);" class="vip zoom-btn" onclick="fnOpenPetalImg()">
         <img src="images/vip.png">
     </a>
     <b class="kog"></b>
@@ -131,24 +131,8 @@ $(function() {
     ready();
 })
 
-
-    function fnOpenCodeImg(){
-        var str='<div class="dark animated fadeInDown" onclick="fnCloseDark()">'+
-            '<div class="box_img">'+
-            '<div class="code_gj">'+
-            '<img src="./images/code_gj.png" alt="">'+
-            '</div>'+
-            '</div>'+
-            '</div>'
-        $('body').append(str)
-    }
-    function fnCloseDark(){
-        $('.dark').remove();
-        $('.addr').val("");
-    }
-	
 	 function fnOpenPetalImg(){
-        var str='<div class="dark animated bounceIn" onclick="fnCloseDark()">'+
+        var str='<div class="dark animated fadeInDown" onclick="fnCloseDark()">'+
             '<div class="box_img">'+
             '<div class="code_gj">'+
             '<img src="./images/petal_txt.png" alt="">'+
